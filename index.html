@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="front-header">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="./img/logo-white.png" alt="" class="logo-default">
+                    <img src="./img/logo.png" alt="" class="logo-scrolled">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">What we do</a>
+                        </li>
+                        <li><a href="">Social campaigns</a></li>
+                        <li><a href="">Impact</a></li>
+                        <li><a href="">Resources</a></li>
+                        <li><a href="">About</a></li>
+
+                    </ul>
+                </nav>
+                <a href="#" class="glbl-btn">
+                    get in touch
+                </a>
+            </div>
+
+
+        </header>
+        <section class="banner">
+            <div class="container">
+                <div class="banner-contant">
+                    <h1>A better you
+                        every day</h1>
+                    <p>Be part of the world’s most powerful life transformation platform
+
+                    </p>
+                    <ul>
+                        <li><a href="#">persnol development</a></li>
+                        <li><a href="#">business solution</a></li>
+                    </ul>
+                </div>
+                <div class="bammer-video">
+                    <video src="./img/banner-video.mp4" autoplay="" loop="" muted="" playsinline=""></video>
+                </div>
+            </div>
+
+        </section>
+
+
+    </section>
+
+
+    <footer>
+
+    </footer>
+
+    <script>
+        const header = document.querySelector('.header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > lastScrollY && currentScroll > 50) {
+                // Scrolling down
+                header.classList.add('scrolled');
+                header.classList.add('shrink');
+            } else if (currentScroll < lastScrollY && currentScroll <= 50) {
+                // Scrolling up
+                header.classList.remove('scrolled');
+                header.classList.remove('shrink');
+            }
+
+            lastScrollY = currentScroll; // Update the last scroll position
+        });
+    </script>
+</body>
+
+</html>
