@@ -130,6 +130,7 @@ header.header.scrolled.shrink .logo .logo-scrolled {
   font-size: 85px;
   line-height: 80px;
   margin-bottom: 15px;
+  text-transform:uppercase;
 }
 
 .banner-contant {
